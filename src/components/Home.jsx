@@ -72,53 +72,59 @@ function Home() {
 
     return (
         <div className="App">
-            <div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">Block Number: {blockNumber}</div>
-            <div class="flex flex-row justify-end bg-red-100" >
-                <form onSubmit={(e) => handleOnSearchBlock(e)} >
-                    <input class="rounded text-pink-500" name="inputSearchBlock" type="text" placeholder="search a block number"></input>
 
-                    <button type="submit" class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"> Search by block number</button>
+            <div class="flex flex-row justify-end bg-red-100  px-8 py-8 "  >
+                <form class="space-x-3 " onSubmit={(e) => handleOnSearchBlock(e)} >
+                    <input class="rounded text-pink-500  text-center " name="inputSearchBlock" type="text" placeholder="search a block number"></input>
+
+                    <button type="submit" class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"> Search block </button>
                 </form>
             </div>
-            <div>
+            <div  >
                 <Block blockNumber={blockNumber} getBlockNumber={getBlockNumber}></Block>
             </div>
 
             <br></br>
 
-            <div>
-                <div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
-                    <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="/img/erin-lindford.jpg" alt="Woman's Face" />
-                    <div class="text-center space-y-2 sm:text-left">
-                        <div class="space-y-0.5">
-                            <p class="text-lg text-black font-semibold">
-                                Erin Lindford
-                            </p>
-                            <p className=" App text-lg text-black font-semibold">Block Number: {blockNumber}</p>
-                            <p class="text-slate-500 font-medium">
-                                Product Engineer
-                            </p>
+
+
+            {/*                     <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="/img/erin-lindford.jpg" alt="Woman's Face" /> */}
+
+
+
+
+            {search && search.map((e) => {
+                return (
+                    <div class=" flex flex-col py-8 px-8 whitespace-normal max-w-min mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 bg-green-100 " key={e.hash}>
+                        <p class="text-lg text-black font-semibold">Block #{e.blockNumber}</p>
+                        <label for="hashSelect">Block's first tx hash</label>
+                        <select id="hashSelect" class="   w-40 mx-auto  " placeholder="hola" >
+                            <option value="block's first tx"  >{e.hash}</option>
+                        </select>
+                        <div class="flex flex-col text-center space-y-1">
+
+                            <p class="text-lg text-black font-semibold">From:</p>
+                            <p>{e.from} </p>
+                            <p class="text-lg text-black font-semibold">To:</p>
+                            <p>{e.to}</p>
                         </div>
-                        <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
                     </div>
-                </div>
+                )
+            })}
 
 
 
-                <br></br>
 
-                {search && search.map((e) => {
-                    return (
-                        <div key={e.hash}>
-                            <p>Block #: {e.blockNumber}</p>
-                            <p>Block first tx:{e.hash}</p>
-                            <p>From:{e.from} </p>
-                            <p>To: {e.to}</p>
-                        </div>
-                    )
-                })}
 
-            </div>
+
+
+
+
+            <br></br>
+
+
+
+
 
             <br></br>
 
