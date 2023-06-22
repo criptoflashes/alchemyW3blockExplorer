@@ -34,21 +34,67 @@ function Transactions({ blockNumber }) {
     getBlockTxs()
   }, [])
 
-  /* console.log(blockTxs) */
+ 
 
   return (
     <div> Last five transactions: {/* {blockTxs} */}
 
-      {blockTxs && blockTxs.map((e) => {
+{/*       {blockTxs && blockTxs.map((e) => {
         return (
           <div key= {e.hash}>
             <p>Tx hash: {e.hash}</p>
             <p>Tx from: {e.from}</p>
-            <p>Tx to: {e.from}</p>
+            <p>Tx to: {e.to}</p>
             <br></br>
           </div>
         )
-      })}
+      })} */}
+      
+
+<div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-left text-sm font-light">
+          <thead class="border-b font-medium dark:border-neutral-500">
+          
+       
+          <tr class=" text-center">
+          <th scope="col">Tx Index</th>
+            <th scope="col">Tx hash</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            </tr>
+         
+          </thead>
+          <tbody>
+          {blockTxs && blockTxs.map((e) => {
+        return (
+            <tr key= {e.hash}
+              class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600">
+                <td class="whitespace-nowrap px-6 py-4">{e.transactionIndex}</td>
+              <td class="whitespace-nowrap px-6 py-4 font-medium">{e.hash}</td>
+              <td class="whitespace-nowrap px-6 py-4">{e.from}</td>
+              <td class="whitespace-nowrap px-6 py-4">{e.to}</td>
+              
+            </tr>
+                 )
+                })}
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
     </div>
   )
 }
