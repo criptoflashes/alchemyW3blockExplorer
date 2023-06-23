@@ -26,9 +26,9 @@ function Block({ blockNumber, getBlockNumber, setShowSearchResult}) {
   return (
 
 
-    <div class="flex justify-center flex-col flex-wrap place-items-center space-y-2 bg-green-100 " >
+    <div class="flex justify-center flex-col flex-wrap place-items-center space-y-2 " >
 
-      <div class="font-semibold rounded-full  hover:text-green-500 "    >
+      <div class="font-light     text-4xl tracking-tight  hover:font-bold hover:text-green-500  hover:tracking-widest"  style={{ textShadow: "-1px -1px cyan" }}  >
         <NavLink to={`block/${blockNumber}`}> <p>#{blockNumber} </p></NavLink>
       </div>
       <div class=' bg-yellow-100 '>
@@ -39,12 +39,16 @@ function Block({ blockNumber, getBlockNumber, setShowSearchResult}) {
             class="absolute inset-0 translate-x-0 translate-y-0 bg-yellow-300 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"
           ></span>
           <span
-            class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest"
+            class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest "style={{ textShadow: "-1px -1px blue" }}
           >
             Get last block
           </span>
         </button>
       </div>
+
+
+
+      
     </div>
   )
 }

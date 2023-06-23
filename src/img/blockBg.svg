@@ -1,0 +1,32 @@
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" width="800" height="800"><defs><pattern id="mmmotif-pattern" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="translate(0 0) scale(1) rotate(45) skewX(0) skewY(0)">
+    <rect width="18" height="18" transform="matrix(0.866025 0.5 -0.866025 0.5 20 2)" fill="hsl(290, 39%, 71%)"></rect>
+    <rect width="18" height="18" transform="matrix(0.866025 0.5 -2.20305e-08 1 4.41162 11)" fill="#fbc9ff"></rect>
+    <rect width="18" height="18" transform="matrix(0.866025 -0.5 2.20305e-08 1 20 20)" fill="#9769a1"></rect>
+</pattern></defs><rect width="800" height="800" fill="url(#mmmotif-pattern)"></rect></svg>
+
+
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.dev/svgjs" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
+  <g mask="url(&quot;#SvgjsMask1029&quot;)" fill="none">
+    <rect width="1440" height="560" x="0" y="0" fill="url(&quot;#SvgjsLinearGradient1030&quot;)"></rect>
+    <path d="M705.1675312457405 513.7993898933071L640.1927788743253 405.663242650755 532.0566316317731 470.6379950221703 597.0313840031885 578.7741422647223z" fill="rgba(28, 83, 142, 0.4)" style="animation: float2 4s infinite;"></path>
+    <path d="M1077.0170482064416 434.0549821696979L997.2445096660495 536.1591753532728 1099.3487028496243 615.9317138936649 1179.1212413900164 513.8275207100901z" fill="rgba(28, 83, 142, 0.4)" style="animation: float3 6s infinite;"></path>
+    <path d="M489.6024697846434 483.5107820134691L558.4725250935106 407.02283669046244 481.98457977050396 338.1527813815952 413.11452446163673 414.6407267046019z" fill="rgba(28, 83, 142, 0.4)" style="animation: float3 6s infinite;"></path>
+    <path d="M1458.2664767143206 310.2775870399856L1371.9462737666329 360.11457944833626 1421.7832661749835 446.43478239602405 1508.1034691226712 396.59778998767337z" fill="rgba(28, 83, 142, 0.4)" style="animation: float3 6s infinite;"></path>
+    <path d="M152.83727713599382-1.8915056412422118L125.49186452075976 93.47328128591442 220.85665144791642 120.81869390114849 248.20206406315046 25.453906973991838z" fill="rgba(28, 83, 142, 0.4)" style="animation: float2 4s infinite;"></path>
+    <path d="M1189.30150480385 423.037156164223L1125.6710181866652 491.2724990161365 1193.9063610385786 554.9029856333215 1257.5368476557635 486.667642781408z" fill="rgba(28, 83, 142, 0.4)" style="animation: float2 4s infinite;"></path>
+    <path d="M100.89147248760863 448.218173201657L166.55178344940034 536.2213273437743 254.55493759151766 470.5610163819826 188.89462662972593 382.5578622398653z" fill="rgba(28, 83, 142, 0.4)" style="animation: float3 6s infinite;"></path>
+  </g>
+  <defs>
+    <mask id="SvgjsMask1029">
+      <rect width="1440" height="560" fill="#ffffff"></rect>
+    </mask>
+    <linearGradient x1="15.28%" y1="-39.29%" x2="84.72%" y2="139.29%" gradientUnits="userSpaceOnUse" id="SvgjsLinearGradient1030">
+      <stop stop-color="#0e2a47" offset="0"></stop>
+      <stop stop-color="rgba(10, 158, 0, 1)" offset="1"></stop>
+    </linearGradient>
+  </defs>
+</svg> -->
