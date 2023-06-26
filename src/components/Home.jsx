@@ -6,7 +6,7 @@ import { Utils } from "alchemy-sdk";
 import { NavLink } from 'react-router-dom'
 import Block from "./Block";
 import blockBg from '../img/blockBg.svg'
-import BackgroungSvg from "./BackgroungSvg";
+
 // Refer to the README doc for more information about using API
 // keys in client-side code. You should never do this in production
 // level code.
@@ -45,7 +45,7 @@ function Home() {
             getBlockNumber()
 
             setBlockWithTxs(blockTxs/* .transactions[0].hash */)
-            console.log("blockTxs", blockTxs/* .transactions[0].hash  */, "blockNumber", blockTxs.transactions[0].blockNumber)
+            /*  console.log("blockTxs", blockTxs, "blockNumber", blockTxs.transactions[0].blockNumber)*/
         } catch (err) {
             console.log(err)
         }
@@ -54,7 +54,6 @@ function Home() {
     }
 
     useEffect(() => {
-
 
         getBlockTxs()
 
@@ -96,7 +95,7 @@ function Home() {
         try {
             const blockSearched = await alchemy.core.getBlockWithTransactions(number);
             setSearch(blockSearched.transactions.slice(0, 1))
-            console.log(search)
+            /* console.log(search) */
             //first transaction
         } catch (err) {
             console.log(err)
@@ -106,8 +105,8 @@ function Home() {
 
     }
 
-    console.log("search", search)
-    console.log('blockWithTxs', blockWithTxs)
+    /*   console.log("search", search)
+      console.log('blockWithTxs', blockWithTxs) */
 
 
 
@@ -121,9 +120,8 @@ function Home() {
     return (
 
 
-        < div class="myClaAA flex flex-col h-screen items-center bg-cover bg-no-repeat " style={{ /* height: '100%' */ backgroundImage: `url(${blockBg})` }}  >
-            {/*  <BackgroungSvg></BackgroungSvg> */}
-            {/* <img src={blockBg} alt="SVG logo image"/> */}
+        < div className="myClaAA flex flex-col h-screen items-center bg-cover bg-no-repeat bg-green-300 " style={{ backgroundImage: `url(${blockBg})` }}  >
+
 
             <div className="h-full w-full ">
                 <div class="flex pt-10 justify-center ">
@@ -143,15 +141,14 @@ function Home() {
                         <input class="inline-block focus:outline-none focus:ring  border-2 border-current  text-center " name="inputSearchBlock" type="text" placeholder="search a block number"></input>
 
 
-                        <button
-                            class="group relative inline-block focus:outline-none focus:ring"
+                        <button class="group relative inline-block focus:outline-none focus:ring"
                         >
                             <span
                                 class="absolute inset-0 translate-x-0 translate-y-0 bg-yellow-300 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"
                             ></span>
 
                             <span
-                                class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest " style={{ textShadow: "-1px -1px blue" }}
+                                class="relative inline-block border-2 border-current px-8 py-3 text-sm font-bold uppercase tracking-widest "style={{ textShadow: "-1px -1px blue" }}
                             >
                                 search
                             </span>
@@ -189,33 +186,34 @@ function Home() {
                         {dataToRenderCard === search ? (
 
                             <>
-                                <p class="text-lg text-black font-semibold">Searched Block #{e.blockNumber}</p>
-                                <label for="hashSelect">Block's first tx hash</label><select id="hashSelect" class="   w-40 mx-auto  " placeholder="hola">
+                                <p class="text-lg text-black font-semibold relative inline-block px-8 py-3 text-sm font-bold uppercase tracking-widest " >Searched Block #{e.blockNumber}</p>
+                                {/* <label >Block's first tx hash</label> */}<select id="hashSelect" class="w-40 mx-auto" placeholder="hola">
                                     <option value="block's first tx">{e.hash}</option>
-                                </select><div class="flex flex-col text-center space-y-1">
+                                </select>
+
+                                <div class="flex flex-col text-center space-y-1">
 
                                     <p class="text-lg text-black font-semibold">From:</p>
                                     <p class='mb-4 font-light hover:animate-fade animate-once '>{e.from} </p>
                                     <p class="text-lg text-black font-semibold ">To:</p>
                                     <p class='mb-4 font-light hover:animate-fade animate-once'>{e.to}</p>
-                                    <p class="text-lg text-black font-semibold">Gas Price:{parseInt(e.gasPrice._hex) || "gas"} </p>
-                                </div></>
-                        )
-                            :
+                                    <div class="text-lg text-black font-semibold" >
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
 
-                            (
+                            <div class="text-lg text-black font-semibold text-center mb-5" ><p class="  text-sm font-bold uppercase tracking-widest "style={{ textShadow: "-1px -1px blue" }} >Last block</p> <p> #{e.blockNumber} {e.number}</p>
+                                <p class=" pt-3 mx-auto">Block's hash</p><select id="hashSelect" class="w-40 mx-auto  " placeholder="hola"> 
+                                    <option value="block's first tx">{e.hash}</option>
+                                </select><div class="flex flex-col text-center space-y-1">
 
-                                <div class="text-lg text-black font-semibold text-center" ><p style={{ textShadow: "-1px -1px blue" }}>Last block</p> <p> #{e.blockNumber} {e.number}</p>
-                                    <label for="hashSelect" style={{ textShadow: "-1px -1px blue" }}>Block's hash</label><select id="hashSelect" class="   w-40 mx-auto  " placeholder="hola">
-                                        <option value="block's first tx">{e.hash}</option>
-                                    </select><div class="flex flex-col text-center space-y-1">
-
-                                        <div class="text-lg text-black font-semibold" >
-                                            <p style={{ textShadow: "-1px -1px blue" }}>Gas used </p>
-                                            <p >{parseInt(e.gasUsed._hex) || "gas"}</p>  </div>
-                                        <p class='mb-4 font-light hover:animate-fade animate-once '>{e.from} </p>
-                                    </div></div>
-                            )}
+                                    <div class="text-lg text-black font-semibold" >
+                                        <p class=" px-8 pt-4 text-sm font-bold uppercase tracking-widest "style={{ textShadow: "-1px -1px blue" }}>Gas used </p>
+                                        <p >{parseInt(e.gasUsed._hex) || "gas"}</p>  </div>
+                                    <p class='mb-2 font-light hover:animate-fade animate-once '>{e.from} </p>
+                                </div></div>
+                        )}
                     </div>
 
                 ))

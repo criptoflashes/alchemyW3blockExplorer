@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/tw-elements/dist/js/**/*.js"],
+  
   theme: {
     extend: {
       backgroundImage: {
@@ -12,7 +13,7 @@ module.exports = {
         raleway:["Raleway", "sans-serif"],
         londrina: ['Londrina Outline', 'cursive']
       },
-      
+    
     },
   },
   plugins: [require("tailwindcss-animated")],

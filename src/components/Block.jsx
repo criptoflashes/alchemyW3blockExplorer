@@ -6,6 +6,7 @@ import { Outlet, useParams } from 'react-router-dom'
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import BlockInfo from '../Pages/BlockInfo';
 
+
 const settings = {
   apiKey: process.env.REACT_APP_ALCHEMY_API_KEY,
   network: Network.ETH_MAINNET,
@@ -13,24 +14,22 @@ const settings = {
 
 const alchemy = new Alchemy(settings);
 
-function Block({ blockNumber, getBlockNumber, setShowSearchResult}) {
-  const [lastBlock, setLastBlock] = useState('')
-
+const Block = ({ blockNumber, getBlockNumber, setShowSearchResult}) => {
 
   const handleOnLastBlock = () => {
     getBlockNumber()
     setShowSearchResult(false)
     
   }
-
   return (
 
 
-    <div class="flex justify-center flex-col flex-wrap place-items-center space-y-2 " >
+    <div class="flex justify-center flex-col flex-wrap place-items-center space-y-2 ">
 
-      <div class="font-light     text-4xl tracking-tight  hover:font-bold hover:text-green-500  hover:tracking-widest"  style={{ textShadow: "-1px -1px cyan" }}  >
+      <div class="font-light text-4xl tracking-tight  hover:font-bold hover:text-green-500  hover:tracking-widest"  style={{ textShadow: "-1px -1px cyan" }}>
         <NavLink to={`block/${blockNumber}`}> <p>#{blockNumber} </p></NavLink>
       </div>
+     
       <div class=' bg-yellow-100 '>
         <button onClick={handleOnLastBlock}
           class="group relative inline-block focus:outline-none focus:ring"
