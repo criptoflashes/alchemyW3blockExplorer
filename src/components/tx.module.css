@@ -1,0 +1,1 @@
+.slideTop:hover{animation:slide-top 0.4s linear both}@keyframes slide-top{0%{transform:translateY(0px)}100%{transform:translateY(-50px)}}
