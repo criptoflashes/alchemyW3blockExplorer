@@ -29,7 +29,7 @@ const BlockInfo = ({ blockNumber }) => {
     return (
         <div class="myClaAA flex flex-col  bg-green-300  h-screen items-center bg-cover bg-no-repeat "  style={{ /* height: '100%' */ backgroundImage: `url(${blockBg})` }} >
 
-            <p class="font-light text-4xl tracking-tight mt-40"  style={{ textShadow: "-1px -1px cyan" }}>BLOCK # {id} </p>
+            <p class="font-light text-4xl tracking-tight mt-40 "  style={{ textShadow: "-1px -1px cyan" }}>BLOCK # {id} </p>
             <Transactions id={id}> transactioons</Transactions>
 
         </div>

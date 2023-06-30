@@ -11,7 +11,11 @@ module.exports = {
       fontFamily: {
         sans: ["Electrolize", "sans-serif"],
         raleway:["Raleway", "sans-serif"],
-        londrina: ['Londrina Outline', 'cursive']
+        londrina: ['Londrina Outline', 'cursive'],
+        monofett: ['Monofett', 'monospace'],
+        nabla: ['Nabla', 'cursive'],
+        rubik: ['Rubik Vinyl', 'cursive']
+
       },
     
     },

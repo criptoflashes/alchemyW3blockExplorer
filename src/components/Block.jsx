@@ -39,13 +39,13 @@ return (
 
   <div class="flex justify-center flex-col flex-wrap place-items-center space-y-2 ">
 
-    <div ref={buttonRef} class="font-light text-4xl tracking-tight  hover:font-bold  hover:tracking-widest " style={{ textShadow: "-1px -1px cyan" }}>
-      <NavLink to={`block/${blockNumber}`}> <p>#{blockNumber} </p></NavLink>
+    <div ref={buttonRef} class="font-bold text-5xl  text-yellow-900 tracking-tight   hover:tracking-widest " style={{ textShadow: "-3px -3px yellow" }}>
+      <NavLink to={`block/${blockNumber}`}> <p class="">#{blockNumber} </p></NavLink>
     </div>
 
     <div class=' bg-yellow-100 '>
       <button onClick={handleOnLastBlock}
-        class="group relative inline-block focus:outline-none focus:ring"
+        class="group relative inline-block   focus:outline-none focus:ring"
       >
         <span
           class="absolute inset-0 translate-x-0 translate-y-0 bg-yellow-300 transition-transform group-hover:translate-y-1.5 group-hover:translate-x-1.5"

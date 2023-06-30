@@ -1,1 +1,85 @@
 .slideTop:hover{animation:slide-top 0.4s linear both}@keyframes slide-top{0%{transform:translateY(0px)}100%{transform:translateY(-50px)}}
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  
+  .sectionText {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    overflow: hidden;
+     
+    animation: animateX 15s linear infinite;
+  }
+
+
+  .sectionText div h2 {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 3em;
+    line-height: 10vh;
+   
+    animation: animateX 15s linear infinite;
+    z-index: 1;
+  } 
+
+
+  
+
+  .sectionTextV {
+    position:absolute;
+    width: 100vW;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+  
+  }
+  
+  .sectionTextV::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 200%;
+    background-image: url('../img/blockBg2.svg');
+    background-size: cover;
+   
+    animation: slide_up 10s linear infinite;
+  }
+  
+  @keyframes slide_up {
+/*     0% {
+      transform: translateY();
+    }
+    100% {
+      transform: translateY(-50%);
+    } */
+
+    100% {
+        transform: translateX(-100%);
+      }
+      0% {
+        transform: translateX(0%);
+      }
+
+
+  }
+
+  @keyframes animateX {
+    0% {
+      transform: translatex(0%);
+    }
+    100% {
+      transform: translatex(100%);
+    }
+  }
+  
+
+
