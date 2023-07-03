@@ -10,11 +10,11 @@
   
   .sectionText {
     position: relative;
-    width: 100%;
+    width: 400%;
     height: 15vh;
     display: flex;
     overflow: hidden;
-     
+    
     animation: animateX 15s linear infinite;
   }
 
@@ -33,12 +33,11 @@
   
 
   .sectionTextV {
-    position:absolute;
+ 
     width: 100vW;
     height: 100%;
-    display: flex;
     overflow: hidden;
-  
+  padding-top: 0px;
   }
   
   .sectionTextV::before {
@@ -72,14 +71,16 @@
 
   }
 
-  @keyframes animateX {
+ @keyframes animateX {
     0% {
       transform: translatex(0%);
     }
     100% {
-      transform: translatex(100%);
+      transform: translatex(-50%);
     }
-  }
+  } 
   
+/* ---------------- */
 
-
+  
+  

@@ -28,15 +28,14 @@ function Transactions({ id }) {
 
  
   return (
-    <div className={" relative"}>
-      <p>Last five transactions:</p>
-
-      <div className={"flex flex-row flex-wrap mt-6" }>
+ 
+    
+      <div className={"flex flex-col mt-10 items-center" }>
         {blockTxs &&
           blockTxs.map((e, index) => (
             <div
 
-              className={`${s.slideTop} flex flex-col py-10 px-3 absolute top-${index + 5} whitespace-normal max-w-min mx-auto bg-yellow-300 drop-shadow-xl border-2 border-current text-sm space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 my-10`}
+              className={`${s.slideTop}  py-5 px-3 absolute top-${index + 9} whitespace-normal max-w-min mx-auto bg-yellow-300 drop-shadow-xl border-2 border-current text-sm space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 my-10`}
               style={{ zIndex: index, marginTop: `${index * 40}px` }} 
               key={e.hash}
             >
@@ -57,7 +56,7 @@ function Transactions({ id }) {
             </div>
           ))}
       </div>
-    </div>
+ 
   );
 }
 
