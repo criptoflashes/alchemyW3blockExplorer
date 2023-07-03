@@ -1,8 +1,6 @@
 import React from 'react'
 import '../index.css'
 import { Alchemy, Network } from "alchemy-sdk";
-import { useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom'
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import { useRef } from 'react';
 import 'animate.css';
