@@ -227,7 +227,7 @@ function Home() {
 
             <div className="flex place-content-start z-10">
 
-                <img src={githubIcon} alt="Descripción de la imagen"  />
+                <img src={githubIcon} alt="github icon"  />
                 <p>Design and development by <a href="https://github.com/criptoflashes">Mariana Maceira</a> </p>
             </div>
 
