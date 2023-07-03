@@ -1,12 +1,9 @@
 import { Alchemy, Network } from "alchemy-sdk";
-/* import { providers } from "ethers"; */
 import '../App.css'
 import { useEffect, useState } from "react";
 import { Utils } from "alchemy-sdk";
-import { NavLink } from 'react-router-dom'
 import Block from "./Block";
-import blockBg from '../img/blockBg.svg'
-import blockBg2 from '../img/blockBg2.svg'
+
 import 'animate.css';
 import s from './tx.module.css'
 
@@ -149,7 +146,7 @@ function Home() {
                 <div className="flex flex-row justify-end   px-8  "  >
 
                     <form className="space-x-3 " onSubmit={(e) => handleOnSearchBlock(e)} >
-                        <input class="inline-block focus:outline-none focus:ring  border-2 border-current px-3 text-center  relative  " name="inputSearchBlock" type="text" placeholder="search a block number"></input>
+                        <input className="inline-block focus:outline-none focus:ring  border-2 border-current px-3 text-center  relative  " name="inputSearchBlock" type="text" placeholder="search a block number"></input>
 
 
                         <button className="group relative inline-block focus:outline-none focus:ring"
@@ -190,16 +187,16 @@ function Home() {
                         {dataToRenderCard === search ? (
 
                             <>
-                                <p className="text-lg text-black font-semibold relative inline-block px-8 py-3 text-sm font-bold uppercase tracking-widest " >Searched Block #{e.blockNumber}</p>
+                                <p className=" my-3 text-lg font-bold uppercase tracking-widest " style={{ textShadow: "-1px -1px blue" }}>Searched Block #{e.blockNumber}</p>
                                 {/* <label >Block's first tx hash</label> */}<select id="hashSelect" className="w-40 mx-auto" placeholder="hola">
                                     <option value="block's first tx">{e.hash}</option>
                                 </select>
 
                                 <div className="flex flex-col text-center space-y-1">
 
-                                    <p className="text-lg text-black font-semibold">From:</p>
+                                    <p className="mt-3 text-sm font-bold uppercase tracking-widest " style={{ textShadow: "-1px -1px blue" }}>From:</p>
                                     <p className='mb-4 font-light hover:animate-fade animate-once '>{e.from} </p>
-                                    <p className="text-lg text-black font-semibold ">To:</p>
+                                    <p className="  text-sm font-bold uppercase tracking-widest " style={{ textShadow: "-1px -1px blue" }}>To:</p>
                                     <p className='mb-4 font-light hover:animate-fade animate-once'>{e.to}</p>
                                     <div className="text-lg text-black font-semibold" >
                                     </div>
