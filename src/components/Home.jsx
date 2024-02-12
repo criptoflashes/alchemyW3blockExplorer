@@ -1,3 +1,5 @@
+
+/* import 'dotenv/config' */
 import { Alchemy, Network } from "alchemy-sdk";
 import '../App.css'
 import { useEffect, useState } from "react";
@@ -7,7 +9,7 @@ import githubIcon from "../img/github.svg"
 import 'animate.css';
 import s from './tx.module.css';
 import { NavLink } from 'react-router-dom';
-
+ require('dotenv').config()  
 
 
 
