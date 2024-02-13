@@ -11,8 +11,6 @@ import s from './tx.module.css';
 import { NavLink } from 'react-router-dom';
  require('dotenv').config()  
 
-
-
 // Refer to the README doc for more information about using API
 // keys in client-side code. You should never do this in production
 // level code.
